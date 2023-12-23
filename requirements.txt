@@ -1,7 +1,1 @@
-altair
-pandas
-matplotlib
 streamlit
-openpyxl
-selenium
-beautifulsoup4
