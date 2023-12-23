@@ -1,0 +1,27 @@
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+            "version": "3.9"
+        }
+	},
+	"forwardPorts": [
+		8501
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ms-python.python",
+				"ms-toolsai.jupyter",
+				"vscode-icons-team.vscode-icons",
+				"tomoki1207.pdf"
+			]
+			// "settings": {
+			// 	"python.interp"
+			// }
+		}
+	},
+	"onCreateCommand": "python3 -m pip install ipykernel && python3 -m pip install -r requirements.txt"
+}
