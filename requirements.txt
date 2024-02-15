@@ -1,2 +1,6 @@
 streamlit
 streamlit-extras
+streamlit-pdf-viewer
+streamlit-authenticator
+st-pages
+firebase-admin
