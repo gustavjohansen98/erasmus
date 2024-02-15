@@ -22,8 +22,20 @@ st.set_page_config(
 #     height=100,
 # )
 
-st.image(image="https://static.wixstatic.com/media/9628d6_7940515619a142ea906e8cd16af09c73~mv2.png/v1/fill/w_420,h_103,al_c,lg_1,q_85,enc_auto/logo%20erasmus.png")
-# st.title('Welcome to `Erasmus+`')
+
+logo_1, logo_2 = st.columns(2)
+with logo_1:
+    st.markdown(
+        '<img src="https://static.wixstatic.com/media/9628d6_7940515619a142ea906e8cd16af09c73~mv2.png/v1/fill/w_420,h_103,al_c,lg_1,q_85,enc_auto/logo%20erasmus.png" style="text-align: center; margin-top: 20px;">',
+        unsafe_allow_html=True
+    )
+
+with logo_2:
+    st.markdown(
+        '<img src="app/static/logo.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">',
+        unsafe_allow_html=True
+    )
+
 
 """
 ## Education for Future and Safetey cross-curricular tools for primary schools
@@ -31,17 +43,11 @@ st.image(image="https://static.wixstatic.com/media/9628d6_7940515619a142ea906e8c
 _Project co-founded by the European Union under Erasmus+ Programme_
 """
 
+
+# -------
+
+
 st.header("Partner schools", divider=True)
-
-
-# poland, finland, portugal, denmark = st.tabs(
-#     [
-#         "Poland",
-#         "Finland",
-#         "Portugal",
-#         "Denmark"
-#     ]
-# )
 
 my_grid = grid(2, 2, 2, 2, vertical_align='center')
 
@@ -50,46 +56,13 @@ my_grid.link_button('Emäkosken koulu, **Finland** ↗️', 'https://www.nokiank
 my_grid.link_button('Agrupamento de Escolas, **Portugal** ↗️', 'https://www.escolasdevnpaiva.pt/', use_container_width=True)
 my_grid.link_button('Provstegårdskolen, **Denmark** ↗️', 'https://provstegaardskolen.aula.dk/', use_container_width=True)
 
-# with my_grid.container():
-#     card(
-#         title="Provstegaardsskolen",
-#         text="Lorem Ipsum dolor sit",
-#         image="https://scontent-cph2-1.xx.fbcdn.net/v/t39.30808-1/295074808_503836558209609_4807329987829343954_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=596444&_nc_ohc=nu-x9QqajO4AX9e6JEY&_nc_ht=scontent-cph2-1.xx&oh=00_AfCXYYOJ2FNeVcO7w2z96MQlt0-c9RXALihjc1nJ0ogvsA&oe=658B64EB",
-#         url="https://provstegaardskolen.aula.dk/",
-#         styles={
-#             "card": {
-#                 "width": "100%", # <- make the card use the width of its container, note that it will not resize the height of the card automatically
-#                 "height": "150px" # <- if you want to set the card height to 300px
-#             }
-#         }
-#     )
 
-# with st.expander(label="Poland"):
-#     """
-#     School info
-#     """
-#     st.link_button("website", "https://provstegaardskolen.aula.dk/", use_container_width=True)
-
-# with st.expander(label="Finland"):
-#     """
-#     School info
-#     """
-#     st.link_button("website", "https://provstegaardskolen.aula.dk/", use_container_width=True)
-
-# with st.expander(label="Portugal"):
-#     """
-#     School info
-#     """
-#     st.link_button("website", "https://provstegaardskolen.aula.dk/", use_container_width=True)
-
-# with st.expander(label="Denmark"):
-#     """
-#     School info
-#     """
-#     st.link_button("website", "https://provstegaardskolen.aula.dk/", use_container_width=True)
+# -------
 
 
 st.header("About the project", divider=True)
+
+st.warning('PLEASE NOTE: The text below is just a placeholder until the actual text is provided')
 
 """
 The project 'Personalised Education For Social Activity' is to combine innovative personalized learning approach with entrepreneurial and social education of students with various educational needs and equip teachers with innovative and effective teaching methods.
