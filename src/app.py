@@ -1,7 +1,6 @@
 import streamlit as st
-from streamlit_extras.app_logo import add_logo
-from streamlit_extras.card import card
 from streamlit_extras.grid import grid
+from st_pages import Page, Section, show_pages, add_page_title, add_indentation
 
 # 🇪🇺
 # 🇫🇮
@@ -17,10 +16,26 @@ st.set_page_config(
         initial_sidebar_state="expanded",
     )
 
-# add_logo(
-#     logo_url="https://static.wixstatic.com/media/9628d6_7940515619a142ea906e8cd16af09c73~mv2.png/v1/fill/w_420,h_103,al_c,lg_1,q_85,enc_auto/logo%20erasmus.png",
-#     height=100,
-# )
+
+add_indentation()
+show_pages(
+    [
+        Page("src/app.py", "Home", "🏠"),
+        Page("src/pages/upload.py", "UPLOAD", "⬆️"),
+
+        Section("Lesson Plans", icon="🎓"),
+        Page("src/pages/tpms/poland.py", "Poland - Zamosc", icon="📁", in_section=True),
+        Page("src/pages/tpms/finland.py", "Finland - Tempera", icon="📁", in_section=True),
+        Page("src/pages/tpms/portugal.py", "Portugal - Porto", icon="📁", in_section=True),
+        Page("src/pages/tpms/denmark.py", "Denmark - Odense", icon="📁", in_section=True),
+
+        Section("International Meetings", icon="🌍"),
+        Page("src/pages/meetings/poland.py", "Poland - Zamosc (Feb. 2024)", icon="📍", in_section=True),
+        Page("src/pages/meetings/finland.py", "Finland - Tempera (May 2024)", icon="📍", in_section=True),
+        Page("src/pages/meetings/portugal.py", "Portugal - Porto (Nov. 2024)", icon="📍", in_section=True),
+        Page("src/pages/meetings/denmark.py", "Denmark - Odense (Apr. 2025)", icon="📍", in_section=True),
+    ]
+)
 
 
 logo_1, logo_2 = st.columns(2)

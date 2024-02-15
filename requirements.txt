@@ -4,3 +4,4 @@ streamlit-pdf-viewer
 streamlit-authenticator
 st-pages
 firebase-admin
+google-api-python-client
