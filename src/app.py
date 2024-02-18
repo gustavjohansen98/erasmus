@@ -21,7 +21,7 @@ add_indentation()
 show_pages(
     [
         Page("src/app.py", "Home", "🏠"),
-        Page("src/pages/upload.py", "UPLOAD", "⬆️"),
+        # Page("src/pages/upload.py", "UPLOAD", "⬆️"),
 
         Section("Lesson Plans", icon="🎓"),
         Page("src/pages/tpms/poland.py", "Poland - Zamosc", icon="📁", in_section=True),
